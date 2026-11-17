@@ -1,0 +1,152 @@
+/* ===== Палитра «Роза» ===== */
+:root {
+    --bg: #fff1f2;
+    --card: #ffffff;
+    --accent: #e11d48;
+    --accent-dark: #9f1239;
+    --header: #881337;
+    --text: #4c0519;
+    --border-soft: #fecdd3;
+    --row-alt: #fff5f6;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+}
+
+/* Верхняя панель и меню */
+header, nav {
+    background: var(--header);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 3px solid var(--accent);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+nav a:hover {
+    background: var(--accent);
+}
+
+/* Логотип */
+img {
+    height: 50px;
+    width: auto;
+}
+
+/* Основной блок */
+main {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 28px;
+    background: var(--card);
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(136, 19, 55, 0.12);
+}
+
+h1 {
+    color: var(--header);
+    margin-top: 0;
+}
+
+/* Форма */
+#formular {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+#formular input {
+    flex: 1 1 180px;
+    padding: 10px 12px;
+    background: #fff;
+    color: var(--text);
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#formular input::placeholder {
+    color: #be7b8b;
+}
+
+#formular input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.2);
+}
+
+/* Кнопки */
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: var(--accent-dark);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+#formular button {
+    flex: 1 1 140px;
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--row-alt);
+}
+
+tbody tr:hover {
+    background: #ffe4e8;
+}
+
+td button {
+    background: #6b7280;
+    padding: 6px 12px;
+}
+
+td button:hover {
+    background: #374151;
+}

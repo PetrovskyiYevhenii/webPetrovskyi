@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website - Formulár zadanie</title>
+    <!-- Глобальний стил -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Власний CSS stylesheet для цього завдання -->
+    <link rel="stylesheet" href="formular_zadanie.css">
+    <!-- Глобальний скрипт для меню -->
+    <script src="app.js" defer></script>
+    <!-- Власний JS для логіки форми та живого перегляду -->
+    <script src="formular_zadanie.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Formulár zadanie</h1>
+        
+        <div class="form-preview-wrapper">
+            <!-- 2. Формуляр -->
+            <form id="registrationForm">
+                <label>
+                    Meno a priezvisko:
+                    <input type="text" id="nameInput" name="fullname" required>
+                </label>
+
+                <label>
+                    E-mail:
+                    <input type="email" id="emailInput" name="email" required>
+                </label>
+
+                <label>
+                    Telefónne číslo:
+                    <input type="tel" id="phoneInput" name="phone">
+                </label>
+
+                <label>
+                    Dátum narodenia:
+                    <input type="date" id="birthdateInput" name="birthdate">
+                </label>
+
+                <label>
+                    Kurz:
+                    <select id="courseSelect" name="course">
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                </label>
+
+                <div class="radio-section">
+                    <span class="label-title">Úroveň:</span>
+                    <div class="radio-options">
+                        <label><input type="radio" name="level" value="Beginner" checked> Beginner</label>
+                        <label><input type="radio" name="level" value="Intermediate"> Intermediate</label>
+                        <label><input type="radio" name="level" value="Advanced"> Advanced</label>
+                    </div>
+                </div>
+
+                <label>
+                    Poznámka:
+                    <textarea id="noteInput" name="note"></textarea>
+                </label>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="termsCheckbox" name="terms" required>
+                    Súhlas s podmienkami
+                </label>
+
+                <button type="submit" id="submitButton">Odoslať</button>
+            </form>
+
+            <!-- 3. Живий нагляд (Live Preview) -->
+            <div id="previewBox" class="preview-box">
+                <h2>Živý náhľad údajov</h2>
+                <p><strong>Meno a priezvisko:</strong> <span id="previewName">-</span></p>
+                <p><strong>E-mail:</strong> <span id="previewEmail">-</span></p>
+                <p><strong>Telefónne číslo:</strong> <span id="previewPhone">-</span></p>
+                <p><strong>Dátum narodenia:</strong> <span id="previewBirthdate">-</span></p>
+                <p><strong>Kurz:</strong> <span id="previewCourse">HTML</span></p>
+                <p><strong>Úroveň:</strong> <span id="previewLevel">Beginner</span></p>
+                <p><strong>Poznámka:</strong> <span id="previewNote">-</span></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

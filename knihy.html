@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Kniznica</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <script src="knihy.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Moja kniznica</h1>
+        <form id="formular">
+           <input type="text" id="nazov" placeholder="Názov knihy">
+            <input type="text" id="autor" placeholder="Autor">
+            <input type="number" id="rok" placeholder="Rok">
+            <input type="number" step="0.01" id="cena" placeholder="Cena (€)">
+            <button type="button" onclick="pridatKnihu()">Pridať knihu</button>
+    </form>
+    <table border="1" cellpadding="8">
+
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Názov</th>
+        <th>Autor</th>
+        <th>Rok</th>
+        <th>Cena (€)</th>
+        <th>Akcia</th>
+    </tr>
+</thead>
+    
+    <tbody id="zoznam"></tbody>
+    </table>
+    </main>
+</body>
+</html>
