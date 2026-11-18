@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2026 at 09:35 PM
+-- Generation Time: Nov 18, 2026 at 05:32 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kniznica`
+-- Table structure for table `knihy`
 --
 
-CREATE TABLE `kniznica` (
+CREATE TABLE `knihy` (
   `id` int(11) NOT NULL,
   `nazov` varchar(150) NOT NULL,
   `autor` varchar(120) NOT NULL,
@@ -36,22 +36,23 @@ CREATE TABLE `kniznica` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `kniznica`
+-- Dumping data for table `knihy`
 --
 
-INSERT INTO `kniznica` (`id`, `nazov`, `autor`, `rok`, `cena`) VALUES
+INSERT INTO `knihy` (`id`, `nazov`, `autor`, `rok`, `cena`) VALUES
 (1, 'Hobit', 'Tolkien', 1937, 12.50),
-(2, '1984', 'Orwell', 1949, 9.90),
-(3, 'Duna', 'Herbert', 1966, 18.00);
+(2, '1984', 'Orwell', 1949, 10.90),
+(3, 'Duna', 'Herbert', 1966, 18.00),
+(12, 'aida', 'chushpan', 2222, 78.00);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `kniznica`
+-- Indexes for table `knihy`
 --
-ALTER TABLE `kniznica`
+ALTER TABLE `knihy`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,10 +60,10 @@ ALTER TABLE `kniznica`
 --
 
 --
--- AUTO_INCREMENT for table `kniznica`
+-- AUTO_INCREMENT for table `knihy`
 --
-ALTER TABLE `kniznica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+ALTER TABLE `knihy`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
