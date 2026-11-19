@@ -59,4 +59,8 @@ app.put("/api/knihy/:id", (req, res) => {
     });
 });
 
+app.use((req, res) => {
+    res.status(404).sendFile(__dirname + "/404.html");
+});
+
 app.listen(3000, () => console.log("http://localhost:3000"));
