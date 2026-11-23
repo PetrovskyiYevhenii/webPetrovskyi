@@ -125,5 +125,15 @@ document.getElementById("resetFilterBtn").addEventListener("click", () => {
     nacitajKnihy();
 });
 
+const prihlasenyEl = document.getElementById("prihlaseny");
+const ulozenyPouzivatel = sessionStorage.getItem("prihlasenyPouzivatel");
+
+if (ulozenyPouzivatel) {
+    const pouzivatel = JSON.parse(ulozenyPouzivatel);
+    prihlasenyEl.textContent = `Prihlaseny pouzivatel: ${pouzivatel.meno}`;
+} else {
+    prihlasenyEl.innerHTML = '<a href="prihlasenie.html">Prihlasit sa</a>';
+}
+
 // Завантажуємо книжки при відкритті сторінки
 nacitajKnihy();
