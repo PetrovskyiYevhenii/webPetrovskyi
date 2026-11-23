@@ -150,3 +150,37 @@ td button {
 td button:hover {
     background: #374151;
 }
+/* Панель пошуку та сортування */
+#filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+#filter input {
+    flex: 1 1 260px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--text);
+    background: #fff;
+}
+
+#filter input:focus,
+#filter select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.2);
+}
+
+#filter select {
+    padding: 10px 12px;
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--text);
+    background: #fff;
+    cursor: pointer;
+}

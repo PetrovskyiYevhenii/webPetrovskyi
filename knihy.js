@@ -1,6 +1,14 @@
 function nacitajKnihy() {
-    fetch("/api/knihy")
-        .then(odpoved => odpoved.json())
+    const hladat = document.getElementById("hladat").value.trim();
+    const zoradit = document.getElementById("zoradit").value;
+    const smer = document.getElementById("smer").value;
+    const parametre = new URLSearchParams({ hladat, zoradit, smer });
+
+    fetch("/api/knihy?" + parametre.toString())
+        .then(odpoved => {
+            if (!odpoved.ok) throw new Error("Server vrátil " + odpoved.status);
+            return odpoved.json();
+        })
         .then(knihy => {
             const zoznam = document.getElementById("zoznam");
             if (!zoznam) return;
@@ -39,7 +47,8 @@ function nacitajKnihy() {
 
                 zoznam.appendChild(riadok);
             });
-        });
+        })
+        .catch(err => console.error("Chyba pri načítaní:", err));
 }
 
 function pridatKnihu() {
@@ -104,6 +113,17 @@ function upravitKnihu(kniha) {
     })
     .catch(err => alert("Chyba pri úprave: " + err.message));
 }
+
+document.getElementById("hladat").addEventListener("input", nacitajKnihy);
+document.getElementById("zoradit").addEventListener("change", nacitajKnihy);
+document.getElementById("smer").addEventListener("change", nacitajKnihy);
+
+document.getElementById("resetFilterBtn").addEventListener("click", () => {
+    document.getElementById("hladat").value = "";
+    document.getElementById("zoradit").value = "id";
+    document.getElementById("smer").value = "ASC";
+    nacitajKnihy();
+});
 
 // Завантажуємо книжки при відкритті сторінки
 nacitajKnihy();
