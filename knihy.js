@@ -1,7 +1,7 @@
 function nacitajKnihy() {
-    const hladat = document.getElementById("hladat").value.trim();
-    const zoradit = document.getElementById("zoradit").value;
-    const smer = document.getElementById("smer").value;
+    const hladat = document.getElementById("hladatInput").value.trim();
+    const zoradit = document.getElementById("zoraditSelect").value;
+    const smer = document.getElementById("smerSelect").value;
     const parametre = new URLSearchParams({ hladat, zoradit, smer });
 
     fetch("/api/knihy?" + parametre.toString())
@@ -114,14 +114,14 @@ function upravitKnihu(kniha) {
     .catch(err => alert("Chyba pri úprave: " + err.message));
 }
 
-document.getElementById("hladat").addEventListener("input", nacitajKnihy);
-document.getElementById("zoradit").addEventListener("change", nacitajKnihy);
-document.getElementById("smer").addEventListener("change", nacitajKnihy);
+document.getElementById("hladatInput").addEventListener("input", nacitajKnihy);
+document.getElementById("zoraditSelect").addEventListener("change", nacitajKnihy);
+document.getElementById("smerSelect").addEventListener("change", nacitajKnihy);
 
 document.getElementById("resetFilterBtn").addEventListener("click", () => {
-    document.getElementById("hladat").value = "";
-    document.getElementById("zoradit").value = "id";
-    document.getElementById("smer").value = "ASC";
+    document.getElementById("hladatInput").value = "";
+    document.getElementById("zoraditSelect").value = "id";
+    document.getElementById("smerSelect").value = "ASC";
     nacitajKnihy();
 });
 

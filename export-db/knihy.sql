@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2026 at 05:32 PM
+-- Generation Time: Nov 27, 2026 at 12:52 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,7 +43,7 @@ INSERT INTO `knihy` (`id`, `nazov`, `autor`, `rok`, `cena`) VALUES
 (1, 'Hobit', 'Tolkien', 1937, 12.50),
 (2, '1984', 'Orwell', 1949, 10.90),
 (3, 'Duna', 'Herbert', 1966, 18.00),
-(12, 'aida', 'chushpan', 2222, 78.00);
+(12, 'hola', 'chushpan', 1876, 63.00);
 
 --
 -- Indexes for dumped tables
